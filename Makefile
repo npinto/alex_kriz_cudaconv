@@ -21,8 +21,8 @@ C_DEPS		:= convCPU.h gpu_locking.h matrix.h matrix_funcs.h
 ################################################################################
 # Rules and targets
 
-ifeq ($(CUDA_VERSION), 2.3)
-	include common-gcc-cuda-2.3.mk
-else
-	include common-gcc-cuda-2.1.mk
-endif
+#ifeq ($(CUDA_VERSION), 2.3)
+include common-gcc-cuda-2.3.mk
+#else
+#	include common-gcc-cuda-2.1.mk
+#endif

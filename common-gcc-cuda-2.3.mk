@@ -39,6 +39,7 @@
 SM_VERSIONS := sm_10 sm_11 sm_12 sm_13
 
 CUDA_INSTALL_PATH ?= /usr/local/cuda
+CUDA_SDK_PATH ?= $(HOME)/NVIDIA_GPU_Computing_SDK
 
 ifdef cuda-install
 	CUDA_INSTALL_PATH := $(cuda-install)
@@ -108,7 +109,7 @@ CWARN_FLAGS := $(CXXWARN_FLAGS) \
 	-Wmain \
 
 # Compiler-specific flags
-NVCCFLAGS := 
+NVCCFLAGS := --compiler-bindir=/usr/bin/gcc-4.3
 CXXFLAGS  := $(CXXWARN_FLAGS)
 CFLAGS    := $(CWARN_FLAGS)
 
